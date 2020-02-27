@@ -14,4 +14,21 @@
 	<natures>
 		<nature>org.robotframework.ide.eclipse.main.plugin.robotNature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>libspecs/OperatingSystem.py</name>
+			<type>1</type>
+			<location>C:/Users/CXHD6031/AppData/Local/Programs/Python/Python37/lib/site-packages/robot/libraries/OperatingSystem.py</location>
+		</link>
+		<link>
+			<name>libspecs/SeleniumLibrary.py</name>
+			<type>1</type>
+			<location>C:/Users/CXHD6031/AppData/Local/Programs/Python/Python37/Lib/site-packages/SeleniumLibrary/__init__.py</location>
+		</link>
+		<link>
+			<name>libspecs/String.py</name>
+			<type>1</type>
+			<location>C:/Users/CXHD6031/AppData/Local/Programs/Python/Python37/lib/site-packages/robot/libraries/String.py</location>
+		</link>
+	</linkedResources>
 </projectDescription>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1.2 (Python 3.7.6 on win32)" generated="20200217 14:00:26.614" rpa="false">
-<suite id="s1" name="X117Project" source="C:\Users\CXHD6031\eclipse-workspace\X117Project">
-<suite id="s1-s1" name="Tests" source="C:\Users\CXHD6031\eclipse-workspace\X117Project\tests">
-<suite id="s1-s1-s1" name="LoginWithFile" source="C:\Users\CXHD6031\eclipse-workspace\X117Project\tests\LoginWithFile.robot">
+<robot generator="Robot 3.1.2 (Python 3.7.6 on win32)" generated="20200227 12:46:41.655" rpa="false">
+<suite id="s1" name="X117-Automation-Robot" source="C:\Users\CXHD6031\eclipse-workspace\X117-Automation-Robot">
+<suite id="s1-s1" name="Tests" source="C:\Users\CXHD6031\eclipse-workspace\X117-Automation-Robot\tests">
+<suite id="s1-s1-s1" name="createAudit" source="C:\Users\CXHD6031\eclipse-workspace\X117-Automation-Robot\tests\createAudit.robot">
 <kw name="Open my Browser" library="login_resource" type="setup">
 <kw name="Open Browser" library="SeleniumLibrary">
 <doc>Opens a new browser instance to the optional ``url``.</doc>
@@ -10,35 +10,42 @@
 <arg>${URLlocal}</arg>
 <arg>${browser}</arg>
 </arguments>
-<msg timestamp="20200217 14:00:27.004" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:8080/index.html?#/'.</msg>
-<status status="PASS" starttime="20200217 14:00:27.003" endtime="20200217 14:00:30.878"></status>
+<msg timestamp="20200227 12:46:42.053" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:8080/index.html?#/'.</msg>
+<status status="PASS" starttime="20200227 12:46:42.053" endtime="20200227 12:46:45.535"></status>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20200217 14:00:30.879" endtime="20200217 14:00:31.169"></status>
+<status status="PASS" starttime="20200227 12:46:45.535" endtime="20200227 12:46:45.991"></status>
 </kw>
-<status status="PASS" starttime="20200217 14:00:27.003" endtime="20200217 14:00:31.170"></status>
-</kw>
-<test id="s1-s1-s1-t1" name="LoginTest with username 01221111151 password 667037 for Role وكيل اول تفتيش فى التفتيش الفني">
-<kw name="HappyLogin">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
 <arguments>
-<arg>01221111151</arg>
-<arg>667037</arg>
-<arg>وكيل اول تفتيش فى التفتيش الفني</arg>
+<arg>0.25s</arg>
+</arguments>
+<status status="PASS" starttime="20200227 12:46:45.991" endtime="20200227 12:46:45.992"></status>
+</kw>
+<status status="PASS" starttime="20200227 12:46:42.052" endtime="20200227 12:46:45.992"></status>
+</kw>
+<test id="s1-s1-s1-t1" name="CreateAudit">
+<kw name="LoginAsWakelAwlTaftesh">
+<kw name="Login" library="DashboardWakelAwl_resource">
+<arguments>
+<arg>${username}</arg>
+<arg>${password}</arg>
 </arguments>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
 <arguments>
 <arg>id=submit</arg>
 </arguments>
-<status status="PASS" starttime="20200217 14:00:31.176" endtime="20200217 14:00:31.261"></status>
+<status status="PASS" starttime="20200227 12:46:45.995" endtime="20200227 12:46:46.263"></status>
 </kw>
 <kw name="Wait For Condition" library="SeleniumLibrary">
 <doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
 <arguments>
 <arg>return jQuery.active == 0</arg>
 </arguments>
-<status status="PASS" starttime="20200217 14:00:31.261" endtime="20200217 14:00:31.298"></status>
+<status status="PASS" starttime="20200227 12:46:46.265" endtime="20200227 12:46:46.532"></status>
 </kw>
 <kw name="Input login username" library="login_resource">
 <arguments>
@@ -50,10 +57,10 @@
 <arg>id=phoneNumber</arg>
 <arg>${username}</arg>
 </arguments>
-<msg timestamp="20200217 14:00:31.300" level="INFO">Typing text '01221111151' into text field 'id=phoneNumber'.</msg>
-<status status="PASS" starttime="20200217 14:00:31.300" endtime="20200217 14:00:31.595"></status>
+<msg timestamp="20200227 12:46:46.536" level="INFO">Typing text '01221111151' into text field 'id=phoneNumber'.</msg>
+<status status="PASS" starttime="20200227 12:46:46.535" endtime="20200227 12:46:47.529"></status>
 </kw>
-<status status="PASS" starttime="20200217 14:00:31.299" endtime="20200217 14:00:31.595"></status>
+<status status="PASS" starttime="20200227 12:46:46.533" endtime="20200227 12:46:47.529"></status>
 </kw>
 <kw name="Input login password" library="login_resource">
 <arguments>
@@ -65,10 +72,10 @@
 <arg>id=password</arg>
 <arg>${password}</arg>
 </arguments>
-<msg timestamp="20200217 14:00:31.596" level="INFO">Typing password into text field 'id=password'.</msg>
-<status status="PASS" starttime="20200217 14:00:31.596" endtime="20200217 14:00:31.768"></status>
+<msg timestamp="20200227 12:46:47.531" level="INFO">Typing password into text field 'id=password'.</msg>
+<status status="PASS" starttime="20200227 12:46:47.530" endtime="20200227 12:46:48.458"></status>
 </kw>
-<status status="PASS" starttime="20200217 14:00:31.595" endtime="20200217 14:00:31.769"></status>
+<status status="PASS" starttime="20200227 12:46:47.529" endtime="20200227 12:46:48.459"></status>
 </kw>
 <kw name="Click login btn" library="login_resource">
 <kw name="Click Button" library="SeleniumLibrary">
@@ -76,39 +83,551 @@
 <arguments>
 <arg>id=submit</arg>
 </arguments>
-<msg timestamp="20200217 14:00:31.771" level="INFO">Clicking button 'id=submit'.</msg>
-<status status="PASS" starttime="20200217 14:00:31.771" endtime="20200217 14:00:31.875"></status>
+<msg timestamp="20200227 12:46:48.463" level="INFO">Clicking button 'id=submit'.</msg>
+<status status="PASS" starttime="20200227 12:46:48.462" endtime="20200227 12:46:49.366"></status>
 </kw>
-<status status="PASS" starttime="20200217 14:00:31.769" endtime="20200217 14:00:31.875"></status>
+<status status="PASS" starttime="20200227 12:46:48.460" endtime="20200227 12:46:49.367"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
 <arguments>
 <arg>id=audit</arg>
 </arguments>
-<status status="PASS" starttime="20200217 14:00:31.876" endtime="20200217 14:00:32.234"></status>
+<status status="PASS" starttime="20200227 12:46:49.368" endtime="20200227 12:46:49.707"></status>
 </kw>
 <kw name="Wait For Condition" library="SeleniumLibrary">
 <doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
 <arguments>
 <arg>return jQuery.active == 0</arg>
 </arguments>
-<status status="PASS" starttime="20200217 14:00:32.235" endtime="20200217 14:00:32.251"></status>
+<status status="PASS" starttime="20200227 12:46:49.708" endtime="20200227 12:46:50.000"></status>
 </kw>
-<kw name="Assert on login for all users" library="login_resource">
+<kw name="Dashboard should be visible" library="login_resource">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
 <arguments>
-<arg>${Role}</arg>
+<arg>id=audit</arg>
 </arguments>
-<kw name="Element Text Should Be" library="SeleniumLibrary">
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<arguments>
-<arg>id=userRole</arg>
-<arg>${Role}</arg>
-</arguments>
-<msg timestamp="20200217 14:00:32.254" level="INFO">Verifying element 'id=userRole' contains exact text 'وكيل اول تفتيش فى التفتيش الفني'.</msg>
-<status status="PASS" starttime="20200217 14:00:32.253" endtime="20200217 14:00:32.320"></status>
+<msg timestamp="20200227 12:46:50.264" level="INFO">Current page contains element 'id=audit'.</msg>
+<status status="PASS" starttime="20200227 12:46:50.001" endtime="20200227 12:46:50.264"></status>
 </kw>
-<status status="PASS" starttime="20200217 14:00:32.252" endtime="20200217 14:00:32.321"></status>
+<status status="PASS" starttime="20200227 12:46:50.000" endtime="20200227 12:46:50.264"></status>
+</kw>
+<status status="PASS" starttime="20200227 12:46:45.994" endtime="20200227 12:46:50.265"></status>
+</kw>
+<status status="PASS" starttime="20200227 12:46:45.994" endtime="20200227 12:46:50.265"></status>
+</kw>
+<kw name="ClickOnAudits" library="DashboardWakelAwl_resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id=audit</arg>
+</arguments>
+<msg timestamp="20200227 12:46:50.267" level="INFO">Clicking element 'id=audit'.</msg>
+<status status="PASS" starttime="20200227 12:46:50.267" endtime="20200227 12:46:50.906"></status>
+</kw>
+<status status="PASS" starttime="20200227 12:46:50.266" endtime="20200227 12:46:50.906"></status>
+</kw>
+<kw name="addNewaudit" library="DashboardWakelAwl_resource">
+<kw name="Wait For Condition" library="SeleniumLibrary">
+<doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
+<arguments>
+<arg>return jQuery.active == 0</arg>
+</arguments>
+<status status="PASS" starttime="20200227 12:46:50.908" endtime="20200227 12:46:51.598"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>id=addAudit</arg>
+</arguments>
+<status status="PASS" starttime="20200227 12:46:51.598" endtime="20200227 12:46:52.283"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>id=addAudit</arg>
+</arguments>
+<status status="PASS" starttime="20200227 12:46:52.284" endtime="20200227 12:46:52.833"></status>
+</kw>
+<kw name="Wait For Condition" library="SeleniumLibrary">
+<doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
+<arguments>
+<arg>return jQuery.active == 0</arg>
+</arguments>
+<status status="PASS" starttime="20200227 12:46:52.833" endtime="20200227 12:46:53.090"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id=addAudit</arg>
+</arguments>
+<msg timestamp="20200227 12:46:53.091" level="INFO">Clicking element 'id=addAudit'.</msg>
+<status status="PASS" starttime="20200227 12:46:53.090" endtime="20200227 12:46:53.693"></status>
+</kw>
+<kw name="Wait For Condition" library="SeleniumLibrary">
+<doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
+<arguments>
+<arg>return jQuery.active == 0</arg>
+</arguments>
+<status status="PASS" starttime="20200227 12:46:53.693" endtime="20200227 12:46:54.613"></status>
+</kw>
+<status status="PASS" starttime="20200227 12:46:50.907" endtime="20200227 12:46:54.614"></status>
+</kw>
+<kw name="FillAllAuditFields" library="DashboardWakelAwl_resource">
+<arguments>
+<arg>${inspectorName}</arg>
+<arg>${inspectedName}</arg>
+<arg>${departmentInspector}</arg>
+</arguments>
+<assign>
+<var>${ID}</var>
+</assign>
+<kw name="Wait For Condition" library="SeleniumLibrary">
+<doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
+<arguments>
+<arg>return jQuery.active == 0</arg>
+</arguments>
+<status status="PASS" starttime="20200227 12:46:54.616" endtime="20200227 12:46:54.871"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>id=TS_internalAuditcreate-inspectorNameAutoCompelete</arg>
+</arguments>
+<status status="PASS" starttime="20200227 12:46:54.871" endtime="20200227 12:46:55.134"></status>
+</kw>
+<kw name="Wait For Condition" library="SeleniumLibrary">
+<doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
+<arguments>
+<arg>return jQuery.active == 0</arg>
+</arguments>
+<status status="PASS" starttime="20200227 12:46:55.134" endtime="20200227 12:46:55.393"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=TS_internalAuditcreate-inspectorNameAutoCompelete</arg>
+<arg>${inspectorName}</arg>
+</arguments>
+<msg timestamp="20200227 12:46:55.394" level="INFO">Typing text 'مهند أحمد' into text field 'id=TS_internalAuditcreate-inspectorNameAutoCompelete'.</msg>
+<status status="PASS" starttime="20200227 12:46:55.393" endtime="20200227 12:46:56.623"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>id=inspector-id-31</arg>
+</arguments>
+<status status="PASS" starttime="20200227 12:46:56.623" endtime="20200227 12:46:56.892"></status>
+</kw>
+<kw name="Wait For Condition" library="SeleniumLibrary">
+<doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
+<arguments>
+<arg>return jQuery.active == 0</arg>
+</arguments>
+<status status="PASS" starttime="20200227 12:46:56.892" endtime="20200227 12:46:57.148"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id=inspector-id-31</arg>
+</arguments>
+<msg timestamp="20200227 12:46:57.149" level="INFO">Clicking element 'id=inspector-id-31'.</msg>
+<status status="PASS" starttime="20200227 12:46:57.148" endtime="20200227 12:46:57.848"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>id=TS_memberLookupAutoComplete.autocomplete</arg>
+</arguments>
+<status status="PASS" starttime="20200227 12:46:57.848" endtime="20200227 12:46:58.117"></status>
+</kw>
+<kw name="Wait For Condition" library="SeleniumLibrary">
+<doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
+<arguments>
+<arg>return jQuery.active == 0</arg>
+</arguments>
+<status status="PASS" starttime="20200227 12:46:58.117" endtime="20200227 12:46:58.373"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=TS_memberLookupAutoComplete.autocomplete</arg>
+<arg>${inspectedName}</arg>
+</arguments>
+<msg timestamp="20200227 12:46:58.374" level="INFO">Typing text 'نوح' into text field 'id=TS_memberLookupAutoComplete.autocomplete'.</msg>
+<status status="PASS" starttime="20200227 12:46:58.373" endtime="20200227 12:46:59.327"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>id=TS_memberLookupAutoComplete-نوح</arg>
+</arguments>
+<status status="PASS" starttime="20200227 12:46:59.327" endtime="20200227 12:47:00.518"></status>
+</kw>
+<kw name="Wait For Condition" library="SeleniumLibrary">
+<doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
+<arguments>
+<arg>return jQuery.active == 0</arg>
+</arguments>
+<status status="PASS" starttime="20200227 12:47:00.518" endtime="20200227 12:47:00.774"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id=TS_memberLookupAutoComplete-نوح</arg>
+</arguments>
+<msg timestamp="20200227 12:47:00.776" level="INFO">Clicking element 'id=TS_memberLookupAutoComplete-نوح'.</msg>
+<status status="PASS" starttime="20200227 12:47:00.775" endtime="20200227 12:47:01.396"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>id=TS_memberlookup</arg>
+</arguments>
+<status status="PASS" starttime="20200227 12:47:01.397" endtime="20200227 12:47:01.690"></status>
+</kw>
+<kw name="Wait For Condition" library="SeleniumLibrary">
+<doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
+<arguments>
+<arg>return jQuery.active == 0</arg>
+</arguments>
+<status status="PASS" starttime="20200227 12:47:01.690" endtime="20200227 12:47:01.949"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id=TS_memberlookup</arg>
+</arguments>
+<msg timestamp="20200227 12:47:01.949" level="INFO">Clicking element 'id=TS_memberlookup'.</msg>
+<status status="PASS" starttime="20200227 12:47:01.949" endtime="20200227 12:47:02.530"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>id=role</arg>
+</arguments>
+<status status="PASS" starttime="20200227 12:47:02.531" endtime="20200227 12:47:02.802"></status>
+</kw>
+<kw name="Wait For Condition" library="SeleniumLibrary">
+<doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
+<arguments>
+<arg>return jQuery.active == 0</arg>
+</arguments>
+<status status="PASS" starttime="20200227 12:47:02.803" endtime="20200227 12:47:03.069"></status>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>id=role</arg>
+<arg>وكيل نيابة</arg>
+</arguments>
+<msg timestamp="20200227 12:47:03.071" level="INFO">Selecting options from selection list 'id=role' by label وكيل نيابة.</msg>
+<status status="PASS" starttime="20200227 12:47:03.070" endtime="20200227 12:47:04.935"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>id=TS_PREVIOUS_DEPARTMENT</arg>
+</arguments>
+<status status="PASS" starttime="20200227 12:47:04.936" endtime="20200227 12:47:05.218"></status>
+</kw>
+<kw name="Wait For Condition" library="SeleniumLibrary">
+<doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
+<arguments>
+<arg>return jQuery.active == 0</arg>
+</arguments>
+<status status="PASS" starttime="20200227 12:47:05.219" endtime="20200227 12:47:05.484"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=TS_PREVIOUS_DEPARTMENT</arg>
+<arg>${departmentInspector}</arg>
+</arguments>
+<msg timestamp="20200227 12:47:05.484" level="INFO">Typing text 'وسط القاهرة الكلية' into text field 'id=TS_PREVIOUS_DEPARTMENT'.</msg>
+<status status="PASS" starttime="20200227 12:47:05.484" endtime="20200227 12:47:07.591"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>id=TS_PREVIOUS_DEPARTMENT-23</arg>
+</arguments>
+<status status="PASS" starttime="20200227 12:47:07.591" endtime="20200227 12:47:07.856"></status>
+</kw>
+<kw name="Wait For Condition" library="SeleniumLibrary">
+<doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
+<arguments>
+<arg>return jQuery.active == 0</arg>
+</arguments>
+<status status="PASS" starttime="20200227 12:47:07.856" endtime="20200227 12:47:08.112"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id=TS_PREVIOUS_DEPARTMENT-23</arg>
+</arguments>
+<msg timestamp="20200227 12:47:08.113" level="INFO">Clicking element 'id=TS_PREVIOUS_DEPARTMENT-23'.</msg>
+<status status="PASS" starttime="20200227 12:47:08.112" endtime="20200227 12:47:08.773"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>id=auditonlyOneMonth</arg>
+</arguments>
+<status status="PASS" starttime="20200227 12:47:08.774" endtime="20200227 12:47:09.060"></status>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<arguments>
+<arg>id=auditonlyOneMonth</arg>
+</arguments>
+<msg timestamp="20200227 12:47:09.061" level="INFO">Selecting checkbox 'id=auditonlyOneMonth'.</msg>
+<status status="PASS" starttime="20200227 12:47:09.060" endtime="20200227 12:47:10.455"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>css=input.md-datepicker-input</arg>
+</arguments>
+<status status="PASS" starttime="20200227 12:47:10.456" endtime="20200227 12:47:10.734"></status>
+</kw>
+<kw name="Wait For Condition" library="SeleniumLibrary">
+<doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
+<arguments>
+<arg>return jQuery.active == 0</arg>
+</arguments>
+<status status="PASS" starttime="20200227 12:47:10.735" endtime="20200227 12:47:11.002"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css=input.md-datepicker-input</arg>
+</arguments>
+<msg timestamp="20200227 12:47:11.003" level="INFO">Clicking element 'css=input.md-datepicker-input'.</msg>
+<status status="PASS" starttime="20200227 12:47:11.002" endtime="20200227 12:47:11.699"></status>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>document.querySelector('[aria-label="February 2019"]').click()</arg>
+</arguments>
+<msg timestamp="20200227 12:47:11.700" level="INFO">Executing JavaScript:
+document.querySelector('[aria-label="February 2019"]').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20200227 12:47:11.699" endtime="20200227 12:47:12.060"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>id=AuditPeriod</arg>
+</arguments>
+<status status="PASS" starttime="20200227 12:47:12.062" endtime="20200227 12:47:12.359"></status>
+</kw>
+<kw name="Wait For Condition" library="SeleniumLibrary">
+<doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
+<arguments>
+<arg>return jQuery.active == 0</arg>
+</arguments>
+<status status="PASS" starttime="20200227 12:47:12.360" endtime="20200227 12:47:12.630"></status>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>id=AuditPeriod</arg>
+<arg>فترة اولى</arg>
+</arguments>
+<msg timestamp="20200227 12:47:12.630" level="INFO">Selecting options from selection list 'id=AuditPeriod' by label فترة اولى.</msg>
+<status status="PASS" starttime="20200227 12:47:12.630" endtime="20200227 12:47:14.542"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>id=addHeadOFCommittee-id-3</arg>
+</arguments>
+<status status="PASS" starttime="20200227 12:47:14.542" endtime="20200227 12:47:14.808"></status>
+</kw>
+<kw name="Wait For Condition" library="SeleniumLibrary">
+<doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
+<arguments>
+<arg>return jQuery.active == 0</arg>
+</arguments>
+<status status="PASS" starttime="20200227 12:47:14.809" endtime="20200227 12:47:15.076"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id=addHeadOFCommittee-id-3</arg>
+</arguments>
+<msg timestamp="20200227 12:47:15.077" level="INFO">Clicking element 'id=addHeadOFCommittee-id-3'.</msg>
+<status status="PASS" starttime="20200227 12:47:15.077" endtime="20200227 12:47:15.757"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id=test-32</arg>
+</arguments>
+<msg timestamp="20200227 12:47:15.758" level="INFO">Clicking element 'id=test-32'.</msg>
+<status status="PASS" starttime="20200227 12:47:15.757" endtime="20200227 12:47:16.357"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id=saveButton</arg>
+</arguments>
+<msg timestamp="20200227 12:47:16.358" level="INFO">Clicking element 'id=saveButton'.</msg>
+<status status="PASS" starttime="20200227 12:47:16.357" endtime="20200227 12:47:16.974"></status>
+</kw>
+<msg timestamp="20200227 12:47:16.974" level="INFO">${ID} = None</msg>
+<status status="PASS" starttime="20200227 12:46:54.614" endtime="20200227 12:47:16.975"></status>
+</kw>
+<kw name="GetRecordIDFromCurrentURL" library="DashboardWakelAwl_resource">
+<assign>
+<var>${ActualRecordID}</var>
+</assign>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>id=recordsPage</arg>
+</arguments>
+<status status="PASS" starttime="20200227 12:47:16.976" endtime="20200227 12:47:18.322"></status>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>return window.location.href;</arg>
+</arguments>
+<assign>
+<var>${auditRecordUrl}</var>
+</assign>
+<msg timestamp="20200227 12:47:18.323" level="INFO">Executing JavaScript:
+return window.location.href;
+Without any arguments.</msg>
+<msg timestamp="20200227 12:47:18.582" level="INFO">${auditRecordUrl} = http://127.0.0.1:8080/index.html?#/internalAudit/215/0</msg>
+<status status="PASS" starttime="20200227 12:47:18.322" endtime="20200227 12:47:18.582"></status>
+</kw>
+<kw name="Split String" library="String">
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<arguments>
+<arg>${auditRecordUrl}</arg>
+<arg>/</arg>
+</arguments>
+<assign>
+<var>@{parts}</var>
+</assign>
+<msg timestamp="20200227 12:47:18.584" level="INFO">@{parts} = [ http: |  | 127.0.0.1:8080 | index.html?# | internalAudit | 215 | 0 ]</msg>
+<status status="PASS" starttime="20200227 12:47:18.583" endtime="20200227 12:47:18.585"></status>
+</kw>
+<msg timestamp="20200227 12:47:18.585" level="INFO">${ActualRecordID} = 215</msg>
+<status status="PASS" starttime="20200227 12:47:16.975" endtime="20200227 12:47:18.586"></status>
+</kw>
+<kw name="ClickOnrecordsPage" library="DashboardWakelAwl_resource">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>id=recordsPage</arg>
+</arguments>
+<status status="PASS" starttime="20200227 12:47:18.587" endtime="20200227 12:47:18.849"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id=recordsPage</arg>
+</arguments>
+<msg timestamp="20200227 12:47:18.851" level="INFO">Clicking element 'id=recordsPage'.</msg>
+<status status="PASS" starttime="20200227 12:47:18.850" endtime="20200227 12:47:19.628"></status>
+</kw>
+<status status="PASS" starttime="20200227 12:47:18.586" endtime="20200227 12:47:19.628"></status>
+</kw>
+<kw name="GetCurrentRecordIDFromTable" library="DashboardWakelAwl_resource">
+<assign>
+<var>${expectedRecordID}</var>
+</assign>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>id=auditsInbox</arg>
+</arguments>
+<status status="PASS" starttime="20200227 12:47:19.629" endtime="20200227 12:47:20.150"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>id=AuditIdSpan-0</arg>
+</arguments>
+<status status="PASS" starttime="20200227 12:47:20.151" endtime="20200227 12:47:20.440"></status>
+</kw>
+<kw name="Wait For Condition" library="SeleniumLibrary">
+<doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
+<arguments>
+<arg>return jQuery.active == 0</arg>
+</arguments>
+<status status="PASS" starttime="20200227 12:47:20.441" endtime="20200227 12:47:20.706"></status>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>return document.getElementById("AuditIdSpan-0").innerText</arg>
+</arguments>
+<assign>
+<var>${recordID}</var>
+</assign>
+<msg timestamp="20200227 12:47:20.709" level="INFO">Executing JavaScript:
+return document.getElementById("AuditIdSpan-0").innerText
+Without any arguments.</msg>
+<msg timestamp="20200227 12:47:20.976" level="INFO">${recordID} = 215</msg>
+<status status="PASS" starttime="20200227 12:47:20.707" endtime="20200227 12:47:20.977"></status>
+</kw>
+<msg timestamp="20200227 12:47:20.978" level="INFO">${expectedRecordID} = 215</msg>
+<status status="PASS" starttime="20200227 12:47:19.628" endtime="20200227 12:47:20.978"></status>
+</kw>
+<kw name="CheckTheRecordExistInWakelAwlTafteshInbox" library="DashboardWakelAwl_resource">
+<arguments>
+<arg>${ActualRecordID}</arg>
+<arg>${expectedRecordID}</arg>
+</arguments>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>"""${actualValue}""".strip() == """${expectedValue}""".strip()</arg>
+</arguments>
+<status status="PASS" starttime="20200227 12:47:20.981" endtime="20200227 12:47:20.983"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>The record exists</arg>
+</arguments>
+<msg timestamp="20200227 12:47:20.985" level="INFO">The record exists</msg>
+<status status="PASS" starttime="20200227 12:47:20.984" endtime="20200227 12:47:20.985"></status>
+</kw>
+<status status="PASS" starttime="20200227 12:47:20.979" endtime="20200227 12:47:20.986"></status>
+</kw>
+<kw name="CheckThatRecordIsUnpublished" library="DashboardWakelAwl_resource">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>id=unpublishData-0</arg>
+</arguments>
+<status status="PASS" starttime="20200227 12:47:20.988" endtime="20200227 12:47:21.269"></status>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>id=unpublishData-0</arg>
+</arguments>
+<msg timestamp="20200227 12:47:21.822" level="INFO">Element 'id=unpublishData-0' is displayed.</msg>
+<status status="PASS" starttime="20200227 12:47:21.270" endtime="20200227 12:47:21.822"></status>
+</kw>
+<kw name="Element Should Not Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<arguments>
+<arg>id=publishData-0</arg>
+</arguments>
+<msg timestamp="20200227 12:47:22.353" level="INFO">Element 'id=publishData-0' exists but is not displayed.</msg>
+<status status="PASS" starttime="20200227 12:47:21.822" endtime="20200227 12:47:22.354"></status>
+</kw>
+<status status="PASS" starttime="20200227 12:47:20.987" endtime="20200227 12:47:22.356"></status>
 </kw>
 <kw name="Click logout btn" library="login_resource">
 <kw name="Click Element" library="SeleniumLibrary">
@@ -116,50 +635,87 @@
 <arguments>
 <arg>id=user_info</arg>
 </arguments>
-<msg timestamp="20200217 14:00:32.324" level="INFO">Clicking element 'id=user_info'.</msg>
-<status status="PASS" starttime="20200217 14:00:32.322" endtime="20200217 14:00:32.415"></status>
+<msg timestamp="20200227 12:47:22.361" level="INFO">Clicking element 'id=user_info'.</msg>
+<status status="PASS" starttime="20200227 12:47:22.359" endtime="20200227 12:47:22.959"></status>
 </kw>
 <kw name="Wait For Condition" library="SeleniumLibrary">
 <doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
 <arguments>
 <arg>return jQuery.active == 0</arg>
 </arguments>
-<status status="PASS" starttime="20200217 14:00:32.416" endtime="20200217 14:00:32.424"></status>
+<status status="PASS" starttime="20200227 12:47:22.959" endtime="20200227 12:47:23.220"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>id=logout</arg>
 </arguments>
-<msg timestamp="20200217 14:00:32.425" level="INFO">Clicking element 'id=logout'.</msg>
-<status status="PASS" starttime="20200217 14:00:32.425" endtime="20200217 14:00:32.666"></status>
+<msg timestamp="20200227 12:47:23.221" level="INFO">Clicking element 'id=logout'.</msg>
+<status status="PASS" starttime="20200227 12:47:23.221" endtime="20200227 12:47:23.823"></status>
 </kw>
-<status status="PASS" starttime="20200217 14:00:32.321" endtime="20200217 14:00:32.667"></status>
+<status status="PASS" starttime="20200227 12:47:22.357" endtime="20200227 12:47:23.824"></status>
 </kw>
-<status status="PASS" starttime="20200217 14:00:31.175" endtime="20200217 14:00:32.667"></status>
-</kw>
-<status status="PASS" starttime="20200217 14:00:31.171" endtime="20200217 14:00:32.668" critical="yes"></status>
-</test>
-<test id="s1-s1-s1-t2" name="LoginTest with username 01203335246 password 525440 for Role رئيس نيابه فى وسط القاهرة الكلية">
-<kw name="HappyLogin">
+<kw name="CheckThatAllUsersCanNotSeeTheRecord">
 <arguments>
-<arg>01203335246</arg>
-<arg>525440</arg>
-<arg>رئيس نيابه فى وسط القاهرة الكلية</arg>
+<arg>${ActualRecordID}</arg>
+</arguments>
+<kw name="Get File" library="OperatingSystem">
+<doc>Returns the contents of a specified file.</doc>
+<arguments>
+<arg>${EXECDIR}\\DataFiles\\UsersData.txt</arg>
+</arguments>
+<assign>
+<var>${File}</var>
+</assign>
+<msg timestamp="20200227 12:47:23.830" level="INFO" html="yes">Getting file '&lt;a href="file://C:\Users\CXHD6031\eclipse-workspace\X117-Automation-Robot\DataFiles\UsersData.txt"&gt;C:\Users\CXHD6031\eclipse-workspace\X117-Automation-Robot\DataFiles\UsersData.txt&lt;/a&gt;'.</msg>
+<msg timestamp="20200227 12:47:23.854" level="INFO">${File} = 01203335246    525440
+01222333331    161186
+01222111118    388120</msg>
+<status status="PASS" starttime="20200227 12:47:23.827" endtime="20200227 12:47:23.855"></status>
+</kw>
+<kw name="Split To Lines" library="String">
+<doc>Splits the given string to lines.</doc>
+<arguments>
+<arg>${File}</arg>
+</arguments>
+<assign>
+<var>@{list}</var>
+</assign>
+<msg timestamp="20200227 12:47:23.856" level="INFO">3 lines returned</msg>
+<msg timestamp="20200227 12:47:23.856" level="INFO">@{list} = [ 01203335246    525440 | 01222333331    161186 | 01222111118    388120 ]</msg>
+<status status="PASS" starttime="20200227 12:47:23.855" endtime="20200227 12:47:23.857"></status>
+</kw>
+<kw name="${line} IN [ @{list} ]" type="for">
+<kw name="${line} = 01203335246    525440" type="foritem">
+<kw name="Split String" library="String">
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<arguments>
+<arg>${line}</arg>
+</arguments>
+<assign>
+<var>@{words}</var>
+</assign>
+<msg timestamp="20200227 12:47:23.859" level="INFO">@{words} = [ 01203335246 | 525440 ]</msg>
+<status status="PASS" starttime="20200227 12:47:23.858" endtime="20200227 12:47:23.859"></status>
+</kw>
+<kw name="Login" library="DashboardWakelAwl_resource">
+<arguments>
+<arg>@{words}[0]</arg>
+<arg>@{words}[1]</arg>
 </arguments>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
 <arguments>
 <arg>id=submit</arg>
 </arguments>
-<status status="PASS" starttime="20200217 14:00:32.673" endtime="20200217 14:00:32.748"></status>
+<status status="PASS" starttime="20200227 12:47:23.860" endtime="20200227 12:47:24.127"></status>
 </kw>
 <kw name="Wait For Condition" library="SeleniumLibrary">
 <doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
 <arguments>
 <arg>return jQuery.active == 0</arg>
 </arguments>
-<status status="PASS" starttime="20200217 14:00:32.749" endtime="20200217 14:00:32.757"></status>
+<status status="PASS" starttime="20200227 12:47:24.128" endtime="20200227 12:47:24.386"></status>
 </kw>
 <kw name="Input login username" library="login_resource">
 <arguments>
@@ -171,10 +727,10 @@
 <arg>id=phoneNumber</arg>
 <arg>${username}</arg>
 </arguments>
-<msg timestamp="20200217 14:00:32.758" level="INFO">Typing text '01203335246' into text field 'id=phoneNumber'.</msg>
-<status status="PASS" starttime="20200217 14:00:32.758" endtime="20200217 14:00:32.966"></status>
+<msg timestamp="20200227 12:47:24.389" level="INFO">Typing text '01203335246' into text field 'id=phoneNumber'.</msg>
+<status status="PASS" starttime="20200227 12:47:24.388" endtime="20200227 12:47:25.379"></status>
 </kw>
-<status status="PASS" starttime="20200217 14:00:32.757" endtime="20200217 14:00:32.967"></status>
+<status status="PASS" starttime="20200227 12:47:24.387" endtime="20200227 12:47:25.381"></status>
 </kw>
 <kw name="Input login password" library="login_resource">
 <arguments>
@@ -186,10 +742,10 @@
 <arg>id=password</arg>
 <arg>${password}</arg>
 </arguments>
-<msg timestamp="20200217 14:00:32.970" level="INFO">Typing password into text field 'id=password'.</msg>
-<status status="PASS" starttime="20200217 14:00:32.969" endtime="20200217 14:00:33.141"></status>
+<msg timestamp="20200227 12:47:25.388" level="INFO">Typing password into text field 'id=password'.</msg>
+<status status="PASS" starttime="20200227 12:47:25.386" endtime="20200227 12:47:26.321"></status>
 </kw>
-<status status="PASS" starttime="20200217 14:00:32.967" endtime="20200217 14:00:33.142"></status>
+<status status="PASS" starttime="20200227 12:47:25.383" endtime="20200227 12:47:26.322"></status>
 </kw>
 <kw name="Click login btn" library="login_resource">
 <kw name="Click Button" library="SeleniumLibrary">
@@ -197,39 +753,104 @@
 <arguments>
 <arg>id=submit</arg>
 </arguments>
-<msg timestamp="20200217 14:00:33.143" level="INFO">Clicking button 'id=submit'.</msg>
-<status status="PASS" starttime="20200217 14:00:33.143" endtime="20200217 14:00:33.231"></status>
+<msg timestamp="20200227 12:47:26.327" level="INFO">Clicking button 'id=submit'.</msg>
+<status status="PASS" starttime="20200227 12:47:26.326" endtime="20200227 12:47:27.213"></status>
 </kw>
-<status status="PASS" starttime="20200217 14:00:33.142" endtime="20200217 14:00:33.231"></status>
+<status status="PASS" starttime="20200227 12:47:26.323" endtime="20200227 12:47:27.213"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
 <arguments>
 <arg>id=audit</arg>
 </arguments>
-<status status="PASS" starttime="20200217 14:00:33.232" endtime="20200217 14:00:33.508"></status>
+<status status="PASS" starttime="20200227 12:47:27.213" endtime="20200227 12:47:27.477"></status>
 </kw>
 <kw name="Wait For Condition" library="SeleniumLibrary">
 <doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
 <arguments>
 <arg>return jQuery.active == 0</arg>
 </arguments>
-<status status="PASS" starttime="20200217 14:00:33.508" endtime="20200217 14:00:33.514"></status>
+<status status="PASS" starttime="20200227 12:47:27.478" endtime="20200227 12:47:27.746"></status>
 </kw>
-<kw name="Assert on login for all users" library="login_resource">
+<kw name="Dashboard should be visible" library="login_resource">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
 <arguments>
-<arg>${Role}</arg>
+<arg>id=audit</arg>
 </arguments>
-<kw name="Element Text Should Be" library="SeleniumLibrary">
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<arguments>
-<arg>id=userRole</arg>
-<arg>${Role}</arg>
-</arguments>
-<msg timestamp="20200217 14:00:33.516" level="INFO">Verifying element 'id=userRole' contains exact text 'رئيس نيابه فى وسط القاهرة الكلية'.</msg>
-<status status="PASS" starttime="20200217 14:00:33.515" endtime="20200217 14:00:33.579"></status>
+<msg timestamp="20200227 12:47:28.027" level="INFO">Current page contains element 'id=audit'.</msg>
+<status status="PASS" starttime="20200227 12:47:27.749" endtime="20200227 12:47:28.028"></status>
 </kw>
-<status status="PASS" starttime="20200217 14:00:33.514" endtime="20200217 14:00:33.580"></status>
+<status status="PASS" starttime="20200227 12:47:27.747" endtime="20200227 12:47:28.029"></status>
+</kw>
+<status status="PASS" starttime="20200227 12:47:23.859" endtime="20200227 12:47:28.030"></status>
+</kw>
+<kw name="ClickOnAudits" library="DashboardWakelAwl_resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id=audit</arg>
+</arguments>
+<msg timestamp="20200227 12:47:28.033" level="INFO">Clicking element 'id=audit'.</msg>
+<status status="PASS" starttime="20200227 12:47:28.032" endtime="20200227 12:47:28.799"></status>
+</kw>
+<status status="PASS" starttime="20200227 12:47:28.031" endtime="20200227 12:47:28.799"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>id=inspectorName-0</arg>
+</arguments>
+<status status="PASS" starttime="20200227 12:47:28.800" endtime="20200227 12:47:29.840"></status>
+</kw>
+<kw name="GetCurrentRecordIDFromTable" library="DashboardWakelAwl_resource">
+<assign>
+<var>${expectedValue}</var>
+</assign>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>id=auditsInbox</arg>
+</arguments>
+<status status="PASS" starttime="20200227 12:47:29.841" endtime="20200227 12:47:30.100"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>id=AuditIdSpan-0</arg>
+</arguments>
+<status status="PASS" starttime="20200227 12:47:30.100" endtime="20200227 12:47:30.362"></status>
+</kw>
+<kw name="Wait For Condition" library="SeleniumLibrary">
+<doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
+<arguments>
+<arg>return jQuery.active == 0</arg>
+</arguments>
+<status status="PASS" starttime="20200227 12:47:30.362" endtime="20200227 12:47:30.618"></status>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>return document.getElementById("AuditIdSpan-0").innerText</arg>
+</arguments>
+<assign>
+<var>${recordID}</var>
+</assign>
+<msg timestamp="20200227 12:47:30.619" level="INFO">Executing JavaScript:
+return document.getElementById("AuditIdSpan-0").innerText
+Without any arguments.</msg>
+<msg timestamp="20200227 12:47:30.876" level="INFO">${recordID} = 119</msg>
+<status status="PASS" starttime="20200227 12:47:30.618" endtime="20200227 12:47:30.877"></status>
+</kw>
+<msg timestamp="20200227 12:47:30.878" level="INFO">${expectedValue} = 119</msg>
+<status status="PASS" starttime="20200227 12:47:29.840" endtime="20200227 12:47:30.878"></status>
+</kw>
+<kw name="Should Not Be True" library="BuiltIn">
+<doc>Fails if the given condition is true.</doc>
+<arguments>
+<arg>"""${actualValue}""".strip() == """${expectedValue}""".strip()</arg>
+</arguments>
+<status status="PASS" starttime="20200227 12:47:30.879" endtime="20200227 12:47:30.882"></status>
 </kw>
 <kw name="Click logout btn" library="login_resource">
 <kw name="Click Element" library="SeleniumLibrary">
@@ -237,50 +858,58 @@
 <arguments>
 <arg>id=user_info</arg>
 </arguments>
-<msg timestamp="20200217 14:00:33.582" level="INFO">Clicking element 'id=user_info'.</msg>
-<status status="PASS" starttime="20200217 14:00:33.581" endtime="20200217 14:00:33.682"></status>
+<msg timestamp="20200227 12:47:30.885" level="INFO">Clicking element 'id=user_info'.</msg>
+<status status="PASS" starttime="20200227 12:47:30.884" endtime="20200227 12:47:31.473"></status>
 </kw>
 <kw name="Wait For Condition" library="SeleniumLibrary">
 <doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
 <arguments>
 <arg>return jQuery.active == 0</arg>
 </arguments>
-<status status="PASS" starttime="20200217 14:00:33.683" endtime="20200217 14:00:33.690"></status>
+<status status="PASS" starttime="20200227 12:47:31.475" endtime="20200227 12:47:31.739"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>id=logout</arg>
 </arguments>
-<msg timestamp="20200217 14:00:33.691" level="INFO">Clicking element 'id=logout'.</msg>
-<status status="PASS" starttime="20200217 14:00:33.690" endtime="20200217 14:00:33.843"></status>
+<msg timestamp="20200227 12:47:31.741" level="INFO">Clicking element 'id=logout'.</msg>
+<status status="PASS" starttime="20200227 12:47:31.740" endtime="20200227 12:47:32.370"></status>
 </kw>
-<status status="PASS" starttime="20200217 14:00:33.580" endtime="20200217 14:00:33.843"></status>
+<status status="PASS" starttime="20200227 12:47:30.882" endtime="20200227 12:47:32.372"></status>
 </kw>
-<status status="PASS" starttime="20200217 14:00:32.672" endtime="20200217 14:00:33.844"></status>
+<status status="PASS" starttime="20200227 12:47:23.857" endtime="20200227 12:47:32.373"></status>
 </kw>
-<status status="PASS" starttime="20200217 14:00:32.670" endtime="20200217 14:00:33.844" critical="yes"></status>
-</test>
-<test id="s1-s1-s1-t3" name="LoginTest with username 01222333331 password 161186 for Role مفتش فى التفتيش الفني">
-<kw name="HappyLogin">
+<kw name="${line} = 01222333331    161186" type="foritem">
+<kw name="Split String" library="String">
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
 <arguments>
-<arg>01222333331</arg>
-<arg>161186</arg>
-<arg>مفتش فى التفتيش الفني</arg>
+<arg>${line}</arg>
+</arguments>
+<assign>
+<var>@{words}</var>
+</assign>
+<msg timestamp="20200227 12:47:32.376" level="INFO">@{words} = [ 01222333331 | 161186 ]</msg>
+<status status="PASS" starttime="20200227 12:47:32.375" endtime="20200227 12:47:32.377"></status>
+</kw>
+<kw name="Login" library="DashboardWakelAwl_resource">
+<arguments>
+<arg>@{words}[0]</arg>
+<arg>@{words}[1]</arg>
 </arguments>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
 <arguments>
 <arg>id=submit</arg>
 </arguments>
-<status status="PASS" starttime="20200217 14:00:33.848" endtime="20200217 14:00:33.865"></status>
+<status status="PASS" starttime="20200227 12:47:32.379" endtime="20200227 12:47:32.652"></status>
 </kw>
 <kw name="Wait For Condition" library="SeleniumLibrary">
 <doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
 <arguments>
 <arg>return jQuery.active == 0</arg>
 </arguments>
-<status status="PASS" starttime="20200217 14:00:33.865" endtime="20200217 14:00:33.875"></status>
+<status status="PASS" starttime="20200227 12:47:32.652" endtime="20200227 12:47:32.909"></status>
 </kw>
 <kw name="Input login username" library="login_resource">
 <arguments>
@@ -292,10 +921,10 @@
 <arg>id=phoneNumber</arg>
 <arg>${username}</arg>
 </arguments>
-<msg timestamp="20200217 14:00:33.877" level="INFO">Typing text '01222333331' into text field 'id=phoneNumber'.</msg>
-<status status="PASS" starttime="20200217 14:00:33.876" endtime="20200217 14:00:34.101"></status>
+<msg timestamp="20200227 12:47:32.914" level="INFO">Typing text '01222333331' into text field 'id=phoneNumber'.</msg>
+<status status="PASS" starttime="20200227 12:47:32.913" endtime="20200227 12:47:33.886"></status>
 </kw>
-<status status="PASS" starttime="20200217 14:00:33.876" endtime="20200217 14:00:34.102"></status>
+<status status="PASS" starttime="20200227 12:47:32.910" endtime="20200227 12:47:33.887"></status>
 </kw>
 <kw name="Input login password" library="login_resource">
 <arguments>
@@ -307,10 +936,10 @@
 <arg>id=password</arg>
 <arg>${password}</arg>
 </arguments>
-<msg timestamp="20200217 14:00:34.104" level="INFO">Typing password into text field 'id=password'.</msg>
-<status status="PASS" starttime="20200217 14:00:34.104" endtime="20200217 14:00:34.258"></status>
+<msg timestamp="20200227 12:47:33.893" level="INFO">Typing password into text field 'id=password'.</msg>
+<status status="PASS" starttime="20200227 12:47:33.891" endtime="20200227 12:47:34.849"></status>
 </kw>
-<status status="PASS" starttime="20200217 14:00:34.103" endtime="20200217 14:00:34.258"></status>
+<status status="PASS" starttime="20200227 12:47:33.889" endtime="20200227 12:47:34.850"></status>
 </kw>
 <kw name="Click login btn" library="login_resource">
 <kw name="Click Button" library="SeleniumLibrary">
@@ -318,39 +947,104 @@
 <arguments>
 <arg>id=submit</arg>
 </arguments>
-<msg timestamp="20200217 14:00:34.260" level="INFO">Clicking button 'id=submit'.</msg>
-<status status="PASS" starttime="20200217 14:00:34.259" endtime="20200217 14:00:34.343"></status>
+<msg timestamp="20200227 12:47:34.854" level="INFO">Clicking button 'id=submit'.</msg>
+<status status="PASS" starttime="20200227 12:47:34.853" endtime="20200227 12:47:35.718"></status>
 </kw>
-<status status="PASS" starttime="20200217 14:00:34.259" endtime="20200217 14:00:34.344"></status>
+<status status="PASS" starttime="20200227 12:47:34.851" endtime="20200227 12:47:35.718"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
 <arguments>
 <arg>id=audit</arg>
 </arguments>
-<status status="PASS" starttime="20200217 14:00:34.345" endtime="20200217 14:00:34.583"></status>
+<status status="PASS" starttime="20200227 12:47:35.718" endtime="20200227 12:47:35.978"></status>
 </kw>
 <kw name="Wait For Condition" library="SeleniumLibrary">
 <doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
 <arguments>
 <arg>return jQuery.active == 0</arg>
 </arguments>
-<status status="PASS" starttime="20200217 14:00:34.584" endtime="20200217 14:00:34.590"></status>
+<status status="PASS" starttime="20200227 12:47:35.978" endtime="20200227 12:47:36.234"></status>
 </kw>
-<kw name="Assert on login for all users" library="login_resource">
+<kw name="Dashboard should be visible" library="login_resource">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
 <arguments>
-<arg>${Role}</arg>
+<arg>id=audit</arg>
 </arguments>
-<kw name="Element Text Should Be" library="SeleniumLibrary">
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<arguments>
-<arg>id=userRole</arg>
-<arg>${Role}</arg>
-</arguments>
-<msg timestamp="20200217 14:00:34.592" level="INFO">Verifying element 'id=userRole' contains exact text 'مفتش فى التفتيش الفني'.</msg>
-<status status="PASS" starttime="20200217 14:00:34.592" endtime="20200217 14:00:34.623"></status>
+<msg timestamp="20200227 12:47:36.496" level="INFO">Current page contains element 'id=audit'.</msg>
+<status status="PASS" starttime="20200227 12:47:36.235" endtime="20200227 12:47:36.496"></status>
 </kw>
-<status status="PASS" starttime="20200217 14:00:34.591" endtime="20200217 14:00:34.624"></status>
+<status status="PASS" starttime="20200227 12:47:36.234" endtime="20200227 12:47:36.498"></status>
+</kw>
+<status status="PASS" starttime="20200227 12:47:32.378" endtime="20200227 12:47:36.499"></status>
+</kw>
+<kw name="ClickOnAudits" library="DashboardWakelAwl_resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id=audit</arg>
+</arguments>
+<msg timestamp="20200227 12:47:36.501" level="INFO">Clicking element 'id=audit'.</msg>
+<status status="PASS" starttime="20200227 12:47:36.500" endtime="20200227 12:47:37.414"></status>
+</kw>
+<status status="PASS" starttime="20200227 12:47:36.499" endtime="20200227 12:47:37.414"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>id=inspectorName-0</arg>
+</arguments>
+<status status="PASS" starttime="20200227 12:47:37.415" endtime="20200227 12:47:38.443"></status>
+</kw>
+<kw name="GetCurrentRecordIDFromTable" library="DashboardWakelAwl_resource">
+<assign>
+<var>${expectedValue}</var>
+</assign>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>id=auditsInbox</arg>
+</arguments>
+<status status="PASS" starttime="20200227 12:47:38.443" endtime="20200227 12:47:38.704"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>id=AuditIdSpan-0</arg>
+</arguments>
+<status status="PASS" starttime="20200227 12:47:38.705" endtime="20200227 12:47:38.983"></status>
+</kw>
+<kw name="Wait For Condition" library="SeleniumLibrary">
+<doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
+<arguments>
+<arg>return jQuery.active == 0</arg>
+</arguments>
+<status status="PASS" starttime="20200227 12:47:38.985" endtime="20200227 12:47:39.256"></status>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>return document.getElementById("AuditIdSpan-0").innerText</arg>
+</arguments>
+<assign>
+<var>${recordID}</var>
+</assign>
+<msg timestamp="20200227 12:47:39.259" level="INFO">Executing JavaScript:
+return document.getElementById("AuditIdSpan-0").innerText
+Without any arguments.</msg>
+<msg timestamp="20200227 12:47:39.525" level="INFO">${recordID} = 121</msg>
+<status status="PASS" starttime="20200227 12:47:39.257" endtime="20200227 12:47:39.525"></status>
+</kw>
+<msg timestamp="20200227 12:47:39.526" level="INFO">${expectedValue} = 121</msg>
+<status status="PASS" starttime="20200227 12:47:38.443" endtime="20200227 12:47:39.526"></status>
+</kw>
+<kw name="Should Not Be True" library="BuiltIn">
+<doc>Fails if the given condition is true.</doc>
+<arguments>
+<arg>"""${actualValue}""".strip() == """${expectedValue}""".strip()</arg>
+</arguments>
+<status status="PASS" starttime="20200227 12:47:39.527" endtime="20200227 12:47:39.528"></status>
 </kw>
 <kw name="Click logout btn" library="login_resource">
 <kw name="Click Element" library="SeleniumLibrary">
@@ -358,50 +1052,58 @@
 <arguments>
 <arg>id=user_info</arg>
 </arguments>
-<msg timestamp="20200217 14:00:34.625" level="INFO">Clicking element 'id=user_info'.</msg>
-<status status="PASS" starttime="20200217 14:00:34.625" endtime="20200217 14:00:34.740"></status>
+<msg timestamp="20200227 12:47:39.530" level="INFO">Clicking element 'id=user_info'.</msg>
+<status status="PASS" starttime="20200227 12:47:39.529" endtime="20200227 12:47:40.116"></status>
 </kw>
 <kw name="Wait For Condition" library="SeleniumLibrary">
 <doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
 <arguments>
 <arg>return jQuery.active == 0</arg>
 </arguments>
-<status status="PASS" starttime="20200217 14:00:34.740" endtime="20200217 14:00:34.792"></status>
+<status status="PASS" starttime="20200227 12:47:40.116" endtime="20200227 12:47:40.376"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>id=logout</arg>
 </arguments>
-<msg timestamp="20200217 14:00:34.793" level="INFO">Clicking element 'id=logout'.</msg>
-<status status="PASS" starttime="20200217 14:00:34.793" endtime="20200217 14:00:34.932"></status>
+<msg timestamp="20200227 12:47:40.378" level="INFO">Clicking element 'id=logout'.</msg>
+<status status="PASS" starttime="20200227 12:47:40.377" endtime="20200227 12:47:40.978"></status>
 </kw>
-<status status="PASS" starttime="20200217 14:00:34.624" endtime="20200217 14:00:34.932"></status>
+<status status="PASS" starttime="20200227 12:47:39.528" endtime="20200227 12:47:40.979"></status>
 </kw>
-<status status="PASS" starttime="20200217 14:00:33.847" endtime="20200217 14:00:34.933"></status>
+<status status="PASS" starttime="20200227 12:47:32.374" endtime="20200227 12:47:40.979"></status>
 </kw>
-<status status="PASS" starttime="20200217 14:00:33.845" endtime="20200217 14:00:34.934" critical="yes"></status>
-</test>
-<test id="s1-s1-s1-t4" name="LoginTest with username 01222111118 password 388120 for Role رئيس لجنة التفتيش فى التفتيش القضائي">
-<kw name="HappyLogin">
+<kw name="${line} = 01222111118    388120" type="foritem">
+<kw name="Split String" library="String">
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
 <arguments>
-<arg>01222111118</arg>
-<arg>388120</arg>
-<arg>رئيس لجنة التفتيش فى التفتيش القضائي</arg>
+<arg>${line}</arg>
+</arguments>
+<assign>
+<var>@{words}</var>
+</assign>
+<msg timestamp="20200227 12:47:40.982" level="INFO">@{words} = [ 01222111118 | 388120 ]</msg>
+<status status="PASS" starttime="20200227 12:47:40.981" endtime="20200227 12:47:40.983"></status>
+</kw>
+<kw name="Login" library="DashboardWakelAwl_resource">
+<arguments>
+<arg>@{words}[0]</arg>
+<arg>@{words}[1]</arg>
 </arguments>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
 <arguments>
 <arg>id=submit</arg>
 </arguments>
-<status status="PASS" starttime="20200217 14:00:34.940" endtime="20200217 14:00:34.953"></status>
+<status status="PASS" starttime="20200227 12:47:40.986" endtime="20200227 12:47:41.254"></status>
 </kw>
 <kw name="Wait For Condition" library="SeleniumLibrary">
 <doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
 <arguments>
 <arg>return jQuery.active == 0</arg>
 </arguments>
-<status status="PASS" starttime="20200217 14:00:34.954" endtime="20200217 14:00:34.961"></status>
+<status status="PASS" starttime="20200227 12:47:41.255" endtime="20200227 12:47:41.518"></status>
 </kw>
 <kw name="Input login username" library="login_resource">
 <arguments>
@@ -413,10 +1115,10 @@
 <arg>id=phoneNumber</arg>
 <arg>${username}</arg>
 </arguments>
-<msg timestamp="20200217 14:00:34.962" level="INFO">Typing text '01222111118' into text field 'id=phoneNumber'.</msg>
-<status status="PASS" starttime="20200217 14:00:34.962" endtime="20200217 14:00:35.178"></status>
+<msg timestamp="20200227 12:47:41.519" level="INFO">Typing text '01222111118' into text field 'id=phoneNumber'.</msg>
+<status status="PASS" starttime="20200227 12:47:41.519" endtime="20200227 12:47:42.466"></status>
 </kw>
-<status status="PASS" starttime="20200217 14:00:34.961" endtime="20200217 14:00:35.178"></status>
+<status status="PASS" starttime="20200227 12:47:41.518" endtime="20200227 12:47:42.467"></status>
 </kw>
 <kw name="Input login password" library="login_resource">
 <arguments>
@@ -428,10 +1130,10 @@
 <arg>id=password</arg>
 <arg>${password}</arg>
 </arguments>
-<msg timestamp="20200217 14:00:35.180" level="INFO">Typing password into text field 'id=password'.</msg>
-<status status="PASS" starttime="20200217 14:00:35.180" endtime="20200217 14:00:35.350"></status>
+<msg timestamp="20200227 12:47:42.471" level="INFO">Typing password into text field 'id=password'.</msg>
+<status status="PASS" starttime="20200227 12:47:42.470" endtime="20200227 12:47:43.421"></status>
 </kw>
-<status status="PASS" starttime="20200217 14:00:35.179" endtime="20200217 14:00:35.351"></status>
+<status status="PASS" starttime="20200227 12:47:42.468" endtime="20200227 12:47:43.422"></status>
 </kw>
 <kw name="Click login btn" library="login_resource">
 <kw name="Click Button" library="SeleniumLibrary">
@@ -439,39 +1141,104 @@
 <arguments>
 <arg>id=submit</arg>
 </arguments>
-<msg timestamp="20200217 14:00:35.354" level="INFO">Clicking button 'id=submit'.</msg>
-<status status="PASS" starttime="20200217 14:00:35.353" endtime="20200217 14:00:35.453"></status>
+<msg timestamp="20200227 12:47:43.427" level="INFO">Clicking button 'id=submit'.</msg>
+<status status="PASS" starttime="20200227 12:47:43.426" endtime="20200227 12:47:44.299"></status>
 </kw>
-<status status="PASS" starttime="20200217 14:00:35.352" endtime="20200217 14:00:35.454"></status>
+<status status="PASS" starttime="20200227 12:47:43.423" endtime="20200227 12:47:44.300"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
 <arguments>
 <arg>id=audit</arg>
 </arguments>
-<status status="PASS" starttime="20200217 14:00:35.455" endtime="20200217 14:00:35.733"></status>
+<status status="PASS" starttime="20200227 12:47:44.301" endtime="20200227 12:47:44.561"></status>
 </kw>
 <kw name="Wait For Condition" library="SeleniumLibrary">
 <doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
 <arguments>
 <arg>return jQuery.active == 0</arg>
 </arguments>
-<status status="PASS" starttime="20200217 14:00:35.734" endtime="20200217 14:00:35.740"></status>
+<status status="PASS" starttime="20200227 12:47:44.562" endtime="20200227 12:47:44.831"></status>
 </kw>
-<kw name="Assert on login for all users" library="login_resource">
+<kw name="Dashboard should be visible" library="login_resource">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
 <arguments>
-<arg>${Role}</arg>
+<arg>id=audit</arg>
 </arguments>
-<kw name="Element Text Should Be" library="SeleniumLibrary">
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<arguments>
-<arg>id=userRole</arg>
-<arg>${Role}</arg>
-</arguments>
-<msg timestamp="20200217 14:00:35.742" level="INFO">Verifying element 'id=userRole' contains exact text 'رئيس لجنة التفتيش فى التفتيش القضائي'.</msg>
-<status status="PASS" starttime="20200217 14:00:35.741" endtime="20200217 14:00:35.769"></status>
+<msg timestamp="20200227 12:47:45.091" level="INFO">Current page contains element 'id=audit'.</msg>
+<status status="PASS" starttime="20200227 12:47:44.832" endtime="20200227 12:47:45.091"></status>
 </kw>
-<status status="PASS" starttime="20200217 14:00:35.740" endtime="20200217 14:00:35.769"></status>
+<status status="PASS" starttime="20200227 12:47:44.831" endtime="20200227 12:47:45.092"></status>
+</kw>
+<status status="PASS" starttime="20200227 12:47:40.984" endtime="20200227 12:47:45.093"></status>
+</kw>
+<kw name="ClickOnAudits" library="DashboardWakelAwl_resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id=audit</arg>
+</arguments>
+<msg timestamp="20200227 12:47:45.095" level="INFO">Clicking element 'id=audit'.</msg>
+<status status="PASS" starttime="20200227 12:47:45.094" endtime="20200227 12:47:45.851"></status>
+</kw>
+<status status="PASS" starttime="20200227 12:47:45.093" endtime="20200227 12:47:45.851"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>id=inspectorName-0</arg>
+</arguments>
+<status status="PASS" starttime="20200227 12:47:45.852" endtime="20200227 12:47:46.699"></status>
+</kw>
+<kw name="GetCurrentRecordIDFromTable" library="DashboardWakelAwl_resource">
+<assign>
+<var>${expectedValue}</var>
+</assign>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>id=auditsInbox</arg>
+</arguments>
+<status status="PASS" starttime="20200227 12:47:46.700" endtime="20200227 12:47:46.961"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>id=AuditIdSpan-0</arg>
+</arguments>
+<status status="PASS" starttime="20200227 12:47:46.963" endtime="20200227 12:47:47.240"></status>
+</kw>
+<kw name="Wait For Condition" library="SeleniumLibrary">
+<doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
+<arguments>
+<arg>return jQuery.active == 0</arg>
+</arguments>
+<status status="PASS" starttime="20200227 12:47:47.241" endtime="20200227 12:47:47.507"></status>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>return document.getElementById("AuditIdSpan-0").innerText</arg>
+</arguments>
+<assign>
+<var>${recordID}</var>
+</assign>
+<msg timestamp="20200227 12:47:47.509" level="INFO">Executing JavaScript:
+return document.getElementById("AuditIdSpan-0").innerText
+Without any arguments.</msg>
+<msg timestamp="20200227 12:47:47.778" level="INFO">${recordID} = 119</msg>
+<status status="PASS" starttime="20200227 12:47:47.507" endtime="20200227 12:47:47.778"></status>
+</kw>
+<msg timestamp="20200227 12:47:47.779" level="INFO">${expectedValue} = 119</msg>
+<status status="PASS" starttime="20200227 12:47:46.699" endtime="20200227 12:47:47.779"></status>
+</kw>
+<kw name="Should Not Be True" library="BuiltIn">
+<doc>Fails if the given condition is true.</doc>
+<arguments>
+<arg>"""${actualValue}""".strip() == """${expectedValue}""".strip()</arg>
+</arguments>
+<status status="PASS" starttime="20200227 12:47:47.779" endtime="20200227 12:47:47.780"></status>
 </kw>
 <kw name="Click logout btn" library="login_resource">
 <kw name="Click Element" library="SeleniumLibrary">
@@ -479,54 +1246,55 @@
 <arguments>
 <arg>id=user_info</arg>
 </arguments>
-<msg timestamp="20200217 14:00:35.771" level="INFO">Clicking element 'id=user_info'.</msg>
-<status status="PASS" starttime="20200217 14:00:35.770" endtime="20200217 14:00:35.917"></status>
+<msg timestamp="20200227 12:47:47.781" level="INFO">Clicking element 'id=user_info'.</msg>
+<status status="PASS" starttime="20200227 12:47:47.780" endtime="20200227 12:47:48.376"></status>
 </kw>
 <kw name="Wait For Condition" library="SeleniumLibrary">
 <doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
 <arguments>
 <arg>return jQuery.active == 0</arg>
 </arguments>
-<status status="PASS" starttime="20200217 14:00:35.918" endtime="20200217 14:00:35.926"></status>
+<status status="PASS" starttime="20200227 12:47:48.377" endtime="20200227 12:47:48.644"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>id=logout</arg>
 </arguments>
-<msg timestamp="20200217 14:00:35.927" level="INFO">Clicking element 'id=logout'.</msg>
-<status status="PASS" starttime="20200217 14:00:35.926" endtime="20200217 14:00:36.077"></status>
+<msg timestamp="20200227 12:47:48.645" level="INFO">Clicking element 'id=logout'.</msg>
+<status status="PASS" starttime="20200227 12:47:48.644" endtime="20200227 12:47:49.257"></status>
 </kw>
-<status status="PASS" starttime="20200217 14:00:35.770" endtime="20200217 14:00:36.078"></status>
+<status status="PASS" starttime="20200227 12:47:47.780" endtime="20200227 12:47:49.259"></status>
 </kw>
-<status status="PASS" starttime="20200217 14:00:34.939" endtime="20200217 14:00:36.079"></status>
+<status status="PASS" starttime="20200227 12:47:40.980" endtime="20200227 12:47:49.259"></status>
 </kw>
-<status status="PASS" starttime="20200217 14:00:34.936" endtime="20200217 14:00:36.079" critical="yes"></status>
-</test>
-<kw name="Close browsers" library="login_resource" type="teardown">
-<kw name="Close All Browsers" library="SeleniumLibrary">
+<status status="PASS" starttime="20200227 12:47:23.857" endtime="20200227 12:47:49.260"></status>
+</kw>
+<status status="PASS" starttime="20200227 12:47:23.825" endtime="20200227 12:47:49.261"></status>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="teardown">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20200217 14:00:36.083" endtime="20200217 14:00:38.699"></status>
+<status status="PASS" starttime="20200227 12:47:49.263" endtime="20200227 12:47:51.971"></status>
 </kw>
-<status status="PASS" starttime="20200217 14:00:36.082" endtime="20200217 14:00:38.700"></status>
-</kw>
-<status status="PASS" starttime="20200217 14:00:26.716" endtime="20200217 14:00:38.701"></status>
+<status status="PASS" starttime="20200227 12:46:45.993" endtime="20200227 12:47:51.972" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20200227 12:46:41.759" endtime="20200227 12:47:51.973"></status>
 </suite>
-<status status="PASS" starttime="20200217 14:00:26.713" endtime="20200217 14:00:38.716"></status>
+<status status="PASS" starttime="20200227 12:46:41.756" endtime="20200227 12:47:51.975"></status>
 </suite>
-<status status="PASS" starttime="20200217 14:00:26.687" endtime="20200217 14:00:38.721"></status>
+<status status="PASS" starttime="20200227 12:46:41.729" endtime="20200227 12:47:51.976"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="4" fail="0">Critical Tests</stat>
-<stat pass="4" fail="0">All Tests</stat>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="4" fail="0" id="s1" name="X117Project">X117Project</stat>
-<stat pass="4" fail="0" id="s1-s1" name="Tests">X117Project.Tests</stat>
-<stat pass="4" fail="0" id="s1-s1-s1" name="LoginWithFile">X117Project.Tests.LoginWithFile</stat>
+<stat pass="1" fail="0" id="s1" name="X117-Automation-Robot">X117-Automation-Robot</stat>
+<stat pass="1" fail="0" id="s1-s1" name="Tests">X117-Automation-Robot.Tests</stat>
+<stat pass="1" fail="0" id="s1-s1-s1" name="createAudit">X117-Automation-Robot.Tests.createAudit</stat>
 </suite>
 </statistics>
 <errors>

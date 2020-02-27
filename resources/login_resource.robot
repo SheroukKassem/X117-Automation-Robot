@@ -9,6 +9,7 @@ ${browser}    chrome
 Open my Browser
     Open Browser    ${URLlocal}    ${browser}
     Maximize Browser Window
+    Set Selenium Speed    0.25s
     
 Close browsers
     Close All Browsers
@@ -26,8 +27,8 @@ Click login btn
     
 Click logout btn
     Click Element    id=user_info
-    Wait For Condition    return jQuery.active == 0   
-    Click Element    id=logout    
+    Wait For Condition    return jQuery.active == 0
+    Click Element    id=logout
     
 Dashboard should be visible
     Page Should Contain Element    id=audit      
